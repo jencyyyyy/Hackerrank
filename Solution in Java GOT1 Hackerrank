@@ -1,0 +1,46 @@
+package gameOfThrones;
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    // Complete the gameOfThrones function below.
+    static String gameOfThrones(String s) {
+        
+        int[] frequencyOfCharecter= new int[26];
+        for(int i=0;i<s.length();i++){
+            frequencyOfCharecter[s.charAt(i) -'a']++;
+        }
+        
+        boolean moreThanOneOdd = false;
+        for(int i=0;i<26;i++){
+            if(frequencyOfCharecter[i]%2 !=0){
+                if(moreThanOneOdd){
+                    return "NO";
+                }else{
+                    moreThanOneOdd = true;
+                }
+            }
+        }
+        return "YES";
+        
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        //    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        try (scanner) {
+            //    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+            
+            String s;
+            s = scanner.nextLine();
+            String result = gameOfThrones(s);
+            System.out.println(result);
+            //   bufferedWriter.write(result);
+            //   bufferedWriter.newLine();
+            //  bufferedWriter.close();*/
+        }
+    }
+}
+
