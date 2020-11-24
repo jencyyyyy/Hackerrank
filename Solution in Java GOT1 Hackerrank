@@ -29,17 +29,17 @@ public class Solution {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        //    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+          BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
         try (scanner) {
-            //    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
             
             String s;
             s = scanner.nextLine();
-            String result = gameOfThrones(s);
-            System.out.println(result);
-            //   bufferedWriter.write(result);
-            //   bufferedWriter.newLine();
-            //  bufferedWriter.close();*/
+          //  String result = gameOfThrones(s);
+          //  System.out.println(result);
+               bufferedWriter.write(result);
+              bufferedWriter.newLine();
+             bufferedWriter.close();
         }
     }
 }
